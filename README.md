@@ -1,2 +1,2 @@
 # youtube-search
-YouTube Search demo using React
+YouTube search demo using React

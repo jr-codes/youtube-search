@@ -1,0 +1,18 @@
+{
+  "name": "youtube-search",
+  "version": "1.0.0",
+  "description": "YouTube search demo using React",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zarjay/youtube-search.git"
+  },
+  "author": "JR Shampang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zarjay/youtube-search/issues"
+  },
+  "homepage": "https://github.com/zarjay/youtube-search#readme"
+}
