@@ -1,0 +1,10 @@
+{
+    "preset": "google",
+    "disallowSpacesInsideObjectBrackets": null,
+    "disallowTrailingWhitespace" : "ignoreEmptyLines",
+    "esnext": true,
+    "maximumLineLength": 200,
+    "requireSpacesInsideObjectBrackets": "all",
+    "validateIndentation" : 4,
+    "validateQuoteMarks" : true
+}
