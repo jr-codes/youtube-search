@@ -4,7 +4,7 @@ import SearchResult from './SearchResult';
 const SearchResults = React.createClass({
     renderResults: function(results) {
         return results.map(function(result) {
-            return <SearchResult key={result.id} thumbnail={result.thumbnail} title={result.title} />
+            return <SearchResult key={result.id} url={result.url} thumbnail={result.thumbnail} title={result.title} />
         })
     },
 
@@ -12,9 +12,9 @@ const SearchResults = React.createClass({
         const items = this.renderResults(this.props.results);
 
         return (
-            <ul className="search-results">
-                <li>{items}</li>
-            </ul>
+            <div className="search__results">
+                {items}
+            </div>
         );
     }
 });

@@ -49,6 +49,5 @@ gulp.task('serve', ['build', 'watch'], tasks.serve('dist'));
 gulp.task('watch', ['watch:js'], function() {
     gulp.watch('src/**/*.html', ['html']);
     gulp.watch('src/styles/**/*.scss', ['css']);
-    //gulp.watch('src/scripts/**/*.js', ['js:lint']);
     gulp.watch('dist/**/*.{html,js}').on('change', browserSync.reload);
 });

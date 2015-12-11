@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import YouTubeSearch from './components/YouTubeSearch';
 
 ReactDOM.render(
-    <YouTubeSearch url="https://www.googleapis.com/youtube/v3/search" apiKey="AIzaSyD_qBykuQzEf6-H3AwpDBQQFE1HZVtI8ec" throttle="750" />,
-    document.getElementById('container')
+    <YouTubeSearch
+        searchUrl="https://www.googleapis.com/youtube/v3/search"
+        watchUrl="https://www.youtube.com/watch"
+        apiKey="AIzaSyD_qBykuQzEf6-H3AwpDBQQFE1HZVtI8ec"
+        throttle="1000" />,
+    document.getElementById('youtube-search')
 );
