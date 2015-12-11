@@ -28,7 +28,7 @@ gulp.task('css', tasks.css({
     showSourceMaps: config.showSourceMaps
 }));
 
-gulp.task('js', ['js:lint'], tasks.js({
+gulp.task('js', tasks.js({
     src: 'src/scripts/*.js',
     dest: 'dist/scripts',
     minify: config.minify,
@@ -44,17 +44,11 @@ gulp.task('watch:js', tasks.js({
     watch: true
 }));
 
-gulp.task('js:lint', tasks.jsValidate([
-    'src/scripts/**/*.js',
-    'gulp/**/*.js',
-    'gulpfile.js'
-]));
-
 gulp.task('serve', ['build', 'watch'], tasks.serve('dist'));
 
 gulp.task('watch', ['watch:js'], function() {
     gulp.watch('src/**/*.html', ['html']);
     gulp.watch('src/styles/**/*.scss', ['css']);
-    gulp.watch('src/scripts/**/*.js', ['js:lint']);
+    //gulp.watch('src/scripts/**/*.js', ['js:lint']);
     gulp.watch('dist/**/*.{html,js}').on('change', browserSync.reload);
 });
