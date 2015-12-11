@@ -1,0 +1,59 @@
+// Structure
+.layout {
+    display: flex;
+    flex-direction: column;
+
+    // Avoid the IE 10-11 `min-height` bug.
+    height: 100%;
+
+    &__header,
+    &__footer {
+        flex: none;
+    }
+
+    &__body {
+        display: flex;
+        // Set flex-shrink to 0 to prevent some browsers from
+        // letting these items shrink to smaller than their content's default
+        // http://bit.ly/1Mn35US
+        flex: 1 0 auto;
+    }
+
+    &__sidebar {
+        width: 20rem;
+    }
+
+    &__content {
+        flex: 1;
+    }
+
+    @media(max-width: 600px) {
+        &__body {
+            flex-direction: column;
+        }
+
+        &__sidebar {
+            order: 2;
+            width: auto;
+        }
+    }
+}
+
+// Theme
+.layout {
+    &__header,
+    &__footer {
+        background-color: #B71C1C;
+        color: #FFF;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    &__header {
+        font-size: 1.5rem;
+    }
+
+    &__sidebar {
+        padding: 1rem;
+    }
+}

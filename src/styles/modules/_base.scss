@@ -1,0 +1,12 @@
+$root-color: #222;
+$root-font-family: Raleway, sans-serif;
+
+@import "../../../node_modules/sanitize.css/sanitize.scss";
+
+:root {
+    height: 100%;
+}
+
+p {
+    margin-bottom: 1rem;
+}

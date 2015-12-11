@@ -10,7 +10,8 @@ import sortBy from 'lodash/collection/sortBy';
 const YouTubeSearch = React.createClass({
     getDefaultProps: function() {
         return {
-            throttle: 500
+            maxResults: 24,
+            throttle: 1000
         }
     },
 
@@ -24,6 +25,7 @@ const YouTubeSearch = React.createClass({
 
     mapResults: function(results) {
         return results.map(item => ({
+            url: `${this.props.watchUrl}?v=${item.id.videoId}`,
             id: item.id.videoId,
             thumbnail: item.snippet.thumbnails.medium.url,
             title: item.snippet.title
@@ -31,7 +33,7 @@ const YouTubeSearch = React.createClass({
     },
 
     search: function(query) {
-        const url = `${this.props.url}?key=${this.props.apiKey}&q=${query}&part=snippet,id&type=video`;
+        const url = `${this.props.searchUrl}?key=${this.props.apiKey}&q=${encodeURIComponent(query)}&part=snippet,id&type=video&maxResults=${this.props.maxResults}`;
 
         fetch(url)
             .then(response => response.json())
