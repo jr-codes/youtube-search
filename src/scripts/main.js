@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import YouTubeSearch from './components/YouTubeSearch';
+import '../styles/main.scss';
 
 ReactDOM.render(
     <YouTubeSearch

@@ -4,8 +4,8 @@ require('whatwg-fetch');
 import React from 'react';
 import SearchBox from './SearchBox';
 import SearchResults from './SearchResults';
-import throttle from 'lodash/function/throttle';
-import sortBy from 'lodash/collection/sortBy';
+import throttle from 'lodash/throttle';
+import sortBy from 'lodash/sortBy';
 
 const YouTubeSearch = React.createClass({
     getDefaultProps: function() {
