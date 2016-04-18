@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
-const SearchBox = React.createClass({
-    handleChange: function(event) {
-        this.props.onSearch(event.target.value);
-    },
+const SearchBox = ({ onSearch }) => {
+    const onChange = event => onSearch(event.target.value);
 
-    render: function() {
-        return (
-            <input className="search__box" type="text" placeholder="Search YouTube" onChange={this.handleChange} />
-        );
-    }
-});
+    return (
+        <input
+            className="search__box"
+            type="text"
+            placeholder="Search YouTube"
+            onChange={onChange} />
+    );
+};
+
+SearchBox.propTypes = {
+    onSearch: PropTypes.func.isRequired
+};
 
 export default SearchBox;

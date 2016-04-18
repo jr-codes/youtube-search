@@ -3,6 +3,8 @@
     "rules": {
         "comma-dangle": [2, "never"],
         "indent": [2, 4],
-        "react/jsx-closing-bracket-location": [2, "after-props"]
+        "max-len": [1, 120],
+        "react/jsx-closing-bracket-location": [2, "after-props"],
+        "react/jsx-indent-props": [2, 4]
     }
 }

@@ -5,9 +5,10 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
     "clean": "del dist/**/*",
+    "lint": "npm run lint:css && npm run lint:js",
     "lint:css": "stylelint src/**/*.scss --syntax scss",
     "lint:js": "eslint src",
-    "prebuild": "npm run clean",
+    "prebuild": "npm run clean && npm run lint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -33,7 +34,7 @@
     "eslint": "2.8.0",
     "eslint-config-airbnb": "7.0.0",
     "eslint-plugin-jsx-a11y": "0.6.2",
-    "eslint-plugin-react": "5.0.0",
+    "eslint-plugin-react": "4.3.0",
     "extract-text-webpack-plugin": "1.0.1",
     "html-webpack-plugin": "2.15.0",
     "node-sass": "3.4.2",
