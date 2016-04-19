@@ -1,9 +1,6 @@
-require('es6-promise').polyfill();
-require('whatwg-fetch');
-
 import React, { Component, PropTypes } from 'react';
-import SearchBox from './SearchBox';
-import SearchResults from './SearchResults';
+import SearchBox from '../SearchBox';
+import SearchResults from '../SearchResults';
 import debounce from 'lodash/debounce';
 import sortBy from 'lodash/sortBy';
 

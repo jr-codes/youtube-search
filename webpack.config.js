@@ -5,7 +5,7 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
     devtool: 'source-map',
-    entry: './src/scripts/main.js',
+    entry: './src/index.js',
     module: {
         loaders: [
             {
