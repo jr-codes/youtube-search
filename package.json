@@ -5,6 +5,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
     "clean": "del dist/**/*",
+    "dev": "webpack-dev-server --content-base dist --inline --hot --port 8080 --open",
     "lint": "npm run lint:css && npm run lint:js",
     "lint:css": "stylelint src/**/*.scss --syntax scss",
     "lint:js": "eslint src",
@@ -43,7 +44,8 @@
     "style-loader": "0.13.1",
     "stylelint": "5.4.0",
     "stylelint-config-standard": "5.0.0",
-    "webpack": "1.13.0"
+    "webpack": "1.13.0",
+    "webpack-dev-server": "1.14.1"
   },
   "dependencies": {
     "es6-promise": "3.1.2",
